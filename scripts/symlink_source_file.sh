@@ -14,7 +14,7 @@ function symlink_source_file() {
   # check source file exists
   if [ -f "$1/$2" ]; then
     # delete file if it already exists in target location
-    if [ -f "$3/$2" ]; then
+    if [ -f "$3/$2" ] || [ -h "$3/$2" ]; then
       rm -f "$3/$2"
     fi
 
