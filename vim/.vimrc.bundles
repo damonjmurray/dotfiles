@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'
+Plugin 'wakatime/vim-wakatime'
 
 Plugin 'pangloss/vim-javascript'      " javascript
 Plugin 'tpope/vim-rails'              " ruby on rails
