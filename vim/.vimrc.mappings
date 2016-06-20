@@ -1,0 +1,9 @@
+if &compatible
+  set nocompatible
+end
+
+
+
+" NERDTree Key Mappings
+:nnoremap <Leader>l :NERDTreeToggle<CR>
+:nnoremap <Leader>Ò :NERDTreeFind<CR>            " <Leader> Shift+Alt+l
