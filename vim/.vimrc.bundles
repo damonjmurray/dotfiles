@@ -21,6 +21,9 @@ Plugin 'tpope/vim-rails'              " ruby on rails
 Plugin 'elixir-lang/vim-elixir'       " elixir
 Plugin 'mxw/vim-jsx'                  " reactjs
 
+Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/nerdcommenter'
+
 
 " NERDTree
 let NERDTreeShowHidden=1
