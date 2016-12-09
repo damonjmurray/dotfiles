@@ -54,3 +54,7 @@ PROMPT_COMMAND=prompt
   # load RVM into a shell session *as a function*
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
   export PATH="$PATH:$HOME/.rvm/bin"
+
+  # NVM #
+  export NVM_DIR="/Users/damonjmurray/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
