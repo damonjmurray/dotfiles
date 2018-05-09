@@ -24,6 +24,7 @@ Plugin 'mxw/vim-jsx'                  " reactjs
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/nerdcommenter'
 
+Plugin 'airblade/vim-gitgutter'
 
 " NERDTree
 let NERDTreeShowHidden=1

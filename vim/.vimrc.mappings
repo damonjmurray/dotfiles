@@ -8,10 +8,10 @@ nnoremap <Space> :noh<Esc><CR>
 
 
 " split resizing
-nnoremap <silent>= :vert resize +5<CR>
-nnoremap <silent>- :vert resize -5<CR>
-nnoremap <silent>_ :resize +5<CR>
-nnoremap <silent>+ :resize -5<CR>
+nnoremap <silent><Leader>= :vert resize +5<CR>
+nnoremap <silent><Leader>- :vert resize -5<CR>
+nnoremap <silent><Leader>_ :resize +5<CR>
+nnoremap <silent><Leader>+ :resize -5<CR>
 
 
 " split navigation

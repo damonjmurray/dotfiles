@@ -28,8 +28,6 @@ set splitright
 set splitbelow
 
 
-
-
 " ==========================================================
 " ===================== LOAD PLUG-INS ======================
 " ==========================================================
@@ -106,14 +104,18 @@ set wildmenu
 set wildmode=list:longest                  " behave like bash
 
 " ignores (I generally only care about code files, not assets)
-set wildignore=*.o,*.obj,*~
+set wildignore=*.o,*.obj,*.out,*~,._*,*.swp
 set wildignore+=*DS_Store*
 set wildignore+=vendor/rails/**
 set wildignore+=vendor/cache/**
+set wildignore+=*/.bundle/*,
+set wildignore+=*/.sass-cache/*
 set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
+set wildignore+=.git,*.rbc,*.rbo,*.class,.svn
 set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
 
 
@@ -152,3 +154,8 @@ set foldnestmax=3
 
 
 
+" ==========================================================
+" ===================== COPY AND PASTE =====================
+" ==========================================================
+
+set clipboard=unnamed                      " this makes it possible to 'yank' to the OSX clipboard
