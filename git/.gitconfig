@@ -1,0 +1,77 @@
+[user]
+    name = Damon J. Murray
+    email = (none)
+
+[alias]
+    st = status
+    a = add -A
+    ca = !git add -A && git commit -av
+    cm = commit -m
+    cma = commit -am
+    amend = commit --amend -C HEAD
+    co = checkout
+    br = branch
+    ps = push
+    cl = clone -r
+    p  = pull -r
+    l = log --graph --abbrev-commit --date=relative
+    ll = log --graph --abbrev-commit --date=relative --name-status
+    lp = log --graph --abbrev-commit --date=relative -p
+    lh = log --pretty=oneline --graph --abbrev-commit
+
+    r = reset HEAD
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+    # delete merged
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+    tags = tag -l
+	branches = branch --all
+	remotes = remote --verbose
+    contributors = shortlog --summary --numbered
+
+[init]
+	defaultBranch = main
+
+[branch]
+	# show most recently changed branches first.
+	sort = -committerdate
+
+[push]
+    # https://git-scm.com/docs/git-config#git-config-pushdefault
+    default = simple
+
+[core]
+    excludesfile = $HOME/.gitignore
+
+    # Treat spaces before tabs and all kinds of trailing whitespace as an error.
+	# [default] trailing-space: looks for spaces at the end of a line
+	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
+[diff]
+    # detect copies as well as renames
+    renames = copies
+
+[apply]
+	# detect whitespace errors when applying a patch.
+	whitespace = fix
+
+[color]
+    ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan

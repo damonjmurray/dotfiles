@@ -2,10 +2,8 @@ if &compatible
   set nocompatible
 end
 
-
 " clear search results
 nnoremap <Space> :noh<Esc><CR>
-
 
 " split resizing
 nnoremap <silent><Leader>= :vert resize +5<CR>
@@ -13,20 +11,15 @@ nnoremap <silent><Leader>- :vert resize -5<CR>
 nnoremap <silent><Leader>_ :resize +5<CR>
 nnoremap <silent><Leader>+ :resize -5<CR>
 
-
 " split navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
 " tab navigation
 nnoremap ˙ :tabn<CR>                             " Alt+h
 nnoremap ¬ :tabp<CR>                             " Alt+l
-
-
-
 
 " NERDTree Key Mappings
 :nnoremap <Leader>l :NERDTreeToggle<CR>

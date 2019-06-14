@@ -1,6 +1,4 @@
-" ==========================================================
-" ==================== GENERAL SETTINGS ====================
-" ==========================================================
+"  GENERAL SETTINGS
 
 set nocompatible                           " use Vim settings rather than vi
 set backspace=indent,eol,start             " backspace in insert mode
@@ -28,31 +26,8 @@ set splitright
 set splitbelow
 
 
-" ==========================================================
-" ===================== LOAD PLUG-INS ======================
-" ==========================================================
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
-
-
-
-
-" ==========================================================
-" ===================== LOAD MAPPINGS ======================
-" ==========================================================
-
-if filereadable(expand("~/.vimrc.mappings"))
-  source ~/.vimrc.mappings
-endif
-
-
-
-
-" ==========================================================
-" =============== EDITOR VISUAL PREFERENCES ================
-" ==========================================================
+" EDITOR VISUAL PREFERENCES
 
 syntax enable                              " syntax highlighting with existing colour settings
 set number                                 " show line numbers
@@ -76,10 +51,7 @@ colorscheme solarized
 
 
 
-
-" ==========================================================
-" ============== TABS, SPACING AND INDENTS  ================
-" ==========================================================
+" TABS, SPACING AND INDENTS
 
 filetype indent on                         " enable filetype specific indenting
 set autoindent                             " maintain current indent
@@ -95,10 +67,7 @@ autocmd BufWritePre * :%s/\s\+$//e         " remove trailing whitespace on save
 
 
 
-
-" ==========================================================
-" ====================== COMPLETION ========================
-" ==========================================================
+" COMPLETION
 
 set wildmenu
 set wildmode=list:longest                  " behave like bash
@@ -119,10 +88,7 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
 
 
-
-" ==========================================================
-" ======================== SEARCH ==========================
-" ==========================================================
+" SEARCH
 
 set hlsearch                               " highlight matches
 set incsearch                              " find matches as search term is typed
@@ -131,10 +97,7 @@ set smartcase                              " only case sensitive if upper-case l
 
 
 
-
-" ==========================================================
-" ======================== SCROLL ==========================
-" ==========================================================
+" SCROLL
 
 set scrolloff=8                            " vertical scroll margin
 set sidescrolloff=15                       " side scroll margin
@@ -142,10 +105,7 @@ set sidescroll=1                           " sides scroll size
 
 
 
-
-" ==========================================================
-" ========================= FOLDS ==========================
-" ==========================================================
+" FOLDS
 
 set nofoldenable                           " do not fold by default
 set foldmethod=indent
@@ -153,9 +113,22 @@ set foldnestmax=3
 
 
 
-
-" ==========================================================
-" ===================== COPY AND PASTE =====================
-" ==========================================================
+" COPY AND PASTE
 
 set clipboard=unnamed                      " this makes it possible to 'yank' to the OSX clipboard
+
+
+
+" PLUG-INS (Vundle)
+
+if filereadable(expand("$HOME/.vimrc.bundles"))
+  source $HOME/.vimrc.bundles
+endif
+
+
+
+" KEY MAPPINGS
+
+if filereadable(expand("$HOME/.vimrc.mappings"))
+  source $HOME/.vimrc.mappings
+endif
